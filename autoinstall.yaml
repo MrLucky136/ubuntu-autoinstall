@@ -4,6 +4,7 @@ autoinstall:
   identity:
     hostname: my-laptop
     username: lucky
+    password: "$6$rounds=4096$KbDwTjgs7Ec6v2Rf$Q/j1FxN9.MD5cF.XE9J.pI8aKh2B8EswW0RgUcnWk5WzgMMQBy4cJbmvAK5ZzBc2w1RiRbrn6zQU3LgPoPPZV/"
   locale: en_US.UTF-8
   timezone: America/Chicago
   keyboard:
@@ -26,13 +27,12 @@ autoinstall:
     - libayatana-appindicator3-1
     - gir1.2-ayatanaappindicator3-0.1
     - gnome-shell-extension-appindicator
-    - eog  # Eye of GNOME for photos
     - python3
     - python3-pip
     - python3-venv
     - ipython
-    - build-essential  # For compiling Python packages with C extensions
-    - python3-dev  # Required for some Python libraries
+    - build-essential
+    - python3-dev
     - fonts-cantarell
     - fonts-firacode
     - virtualbox
@@ -71,15 +71,14 @@ autoinstall:
     - gnome-extensions enable caffeine@patapon.info
     - gnome-extensions enable vuemeter@trogonproject
     - gnome-extensions enable weather-or-not@kylorlovett
-    - gsettings set org.gnome.desktop.interface font-name 'Cantarell Regular 11'  # Set Cantarell for interface text
-    - gsettings set org.gnome.desktop.interface document-font-name 'Cantarell Regular 11'  # Set Cantarell for documents
-    - gsettings set org.gnome.desktop.interface monospace-font-name 'Fira Code Medium 11'  # Set Fira Code for monospace text
+    - gsettings set org.gnome.desktop.interface font-name 'Cantarell Regular 11'
+    - gsettings set org.gnome.desktop.interface document-font-name 'Cantarell Regular 11'
+    - gsettings set org.gnome.desktop.interface monospace-font-name 'Fira Code Medium 11'
     - xdg-settings set default-web-browser brave-browser.desktop
     - xdg-mime default mpv.desktop audio/*
     - xdg-mime default mpv.desktop video/*
     - xdg-mime default eog.desktop image/*
-    - gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'  # Enable dark mode
-    - gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark' # Ensure dark mode preference
+    - gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+    - gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
     - ufw enable
     - echo "Setup Complete" > /etc/motd
-
